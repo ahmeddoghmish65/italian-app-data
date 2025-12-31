@@ -1,0 +1,50 @@
+{
+  "a1": [
+    {
+      "id": "cafe",
+      "title": "في المقهى",
+      "icon": "coffee",
+      "dialogue": [
+        { "speaker": "A", "name": "النادل", "it": "Buongiorno! Cosa desidera?", "ar": "صباح الخير! ماذا تريد؟" },
+        { "speaker": "B", "name": "الزبون", "it": "Buongiorno! Un caffè, per favore.", "ar": "صباح الخير! قهوة، من فضلك." },
+        { "speaker": "A", "name": "النادل", "it": "Espresso o cappuccino?", "ar": "إسبريسو أم كابتشينو؟" },
+        { "speaker": "B", "name": "الزبون", "it": "Un cappuccino, grazie.", "ar": "كابتشينو، شكراً." },
+        { "speaker": "A", "name": "النادل", "it": "Subito! Desidera altro?", "ar": "حالاً! تريد شيئاً آخر؟" },
+        { "speaker": "B", "name": "الزبون", "it": "Sì, un cornetto.", "ar": "نعم، كرواسون." },
+        { "speaker": "A", "name": "النادل", "it": "Perfetto! Sono 4 euro.", "ar": "ممتاز! 4 يورو." },
+        { "speaker": "B", "name": "الزبون", "it": "Ecco a Lei. Grazie!", "ar": "تفضل. شكراً!" }
+      ]
+    },
+    {
+      "id": "meeting",
+      "title": "التعارف",
+      "icon": "users",
+      "dialogue": [
+        { "speaker": "A", "name": "ماركو", "it": "Ciao! Come ti chiami?", "ar": "مرحباً! ما اسمك؟" },
+        { "speaker": "B", "name": "أحمد", "it": "Ciao! Mi chiamo Ahmed. E tu?", "ar": "مرحباً! اسمي أحمد. وأنت؟" },
+        { "speaker": "A", "name": "ماركو", "it": "Io sono Marco. Piacere!", "ar": "أنا ماركو. سعيد بمعرفتك!" },
+        { "speaker": "B", "name": "أحمد", "it": "Piacere mio! Di dove sei?", "ar": "السعادة لي! من أين أنت؟" },
+        { "speaker": "A", "name": "ماركو", "it": "Sono italiano, di Roma. E tu?", "ar": "أنا إيطالي، من روما. وأنت؟" },
+        { "speaker": "B", "name": "أحمد", "it": "Sono egiziano, del Cairo.", "ar": "أنا مصري، من القاهرة." },
+        { "speaker": "A", "name": "ماركو", "it": "Che bello! Studi qui?", "ar": "رائع! تدرس هنا؟" },
+        { "speaker": "B", "name": "أحمد", "it": "Sì, studio italiano.", "ar": "نعم، أدرس الإيطالية." }
+      ]
+    }
+  ],
+  "a2": [
+    {
+      "id": "hotel",
+      "title": "في الفندق",
+      "icon": "hotel",
+      "dialogue": [
+        { "speaker": "A", "name": "موظف", "it": "Buonasera, come posso aiutarla?", "ar": "مساء الخير، كيف أستطيع مساعدتك؟" },
+        { "speaker": "B", "name": "زائر", "it": "Ho una prenotazione.", "ar": "لدي حجز." },
+        { "speaker": "A", "name": "موظف", "it": "A che nome?", "ar": "باسم من؟" },
+        { "speaker": "B", "name": "زائر", "it": "Ahmed Hassan.", "ar": "أحمد حسن." },
+        { "speaker": "A", "name": "موظف", "it": "Perfetto! Camera 305. Ecco la chiave.", "ar": "ممتاز! غرفة 305. تفضل المفتاح." }
+      ]
+    }
+  ],
+  "b1": [],
+  "b2": []
+}
