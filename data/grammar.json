@@ -1,0 +1,97 @@
+{
+  "a1": [
+    {
+      "id": "pronouns",
+      "title": "الضمائر الشخصية",
+      "subtitle": "I pronomi personali",
+      "icon": "user",
+      "content": {
+        "explanation": "الضمائر الشخصية في الإيطالية تستخدم للإشارة إلى الأشخاص. في الإيطالية، غالباً ما يمكن حذف الضمير لأن تصريف الفعل يدل عليه.",
+        "table": [
+          { "pronoun": "Io", "conjugation": "أنا", "meaning": "المتكلم المفرد" },
+          { "pronoun": "Tu", "conjugation": "أنت", "meaning": "المخاطب المفرد" },
+          { "pronoun": "Lui", "conjugation": "هو", "meaning": "الغائب المذكر" },
+          { "pronoun": "Lei", "conjugation": "هي", "meaning": "الغائب المؤنث" },
+          { "pronoun": "Noi", "conjugation": "نحن", "meaning": "المتكلم الجمع" },
+          { "pronoun": "Voi", "conjugation": "أنتم", "meaning": "المخاطب الجمع" },
+          { "pronoun": "Loro", "conjugation": "هم", "meaning": "الغائب الجمع" }
+        ],
+        "examples": [
+          { "it": "Io sono Ahmed.", "ar": "أنا أحمد." },
+          { "it": "Tu sei molto gentile.", "ar": "أنت لطيف جداً." },
+          { "it": "Lei è italiana.", "ar": "هي إيطالية." }
+        ]
+      }
+    },
+    {
+      "id": "essere",
+      "title": "فعل Essere",
+      "subtitle": "يكون",
+      "icon": "equals",
+      "content": {
+        "explanation": "فعل Essere (يكون) من أهم الأفعال في الإيطالية. يستخدم للتعريف بالنفس، الجنسية، المهنة، والصفات.",
+        "table": [
+          { "pronoun": "Io", "conjugation": "sono", "meaning": "أنا أكون" },
+          { "pronoun": "Tu", "conjugation": "sei", "meaning": "أنت تكون" },
+          { "pronoun": "Lui/Lei", "conjugation": "è", "meaning": "هو/هي يكون" },
+          { "pronoun": "Noi", "conjugation": "siamo", "meaning": "نحن نكون" },
+          { "pronoun": "Voi", "conjugation": "siete", "meaning": "أنتم تكونون" },
+          { "pronoun": "Loro", "conjugation": "sono", "meaning": "هم يكونون" }
+        ],
+        "examples": [
+          { "it": "Io sono felice.", "ar": "أنا سعيد." },
+          { "it": "Lei è una dottoressa.", "ar": "هي طبيبة." },
+          { "it": "Noi siamo studenti.", "ar": "نحن طلاب." }
+        ]
+      }
+    },
+    {
+      "id": "avere",
+      "title": "فعل Avere",
+      "subtitle": "يملك",
+      "icon": "hand-holding",
+      "content": {
+        "explanation": "فعل Avere (يملك) يستخدم للتعبير عن الملكية والعمر والأحاسيس الجسدية.",
+        "table": [
+          { "pronoun": "Io", "conjugation": "ho", "meaning": "أنا أملك" },
+          { "pronoun": "Tu", "conjugation": "hai", "meaning": "أنت تملك" },
+          { "pronoun": "Lui/Lei", "conjugation": "ha", "meaning": "هو/هي يملك" },
+          { "pronoun": "Noi", "conjugation": "abbiamo", "meaning": "نحن نملك" },
+          { "pronoun": "Voi", "conjugation": "avete", "meaning": "أنتم تملكون" },
+          { "pronoun": "Loro", "conjugation": "hanno", "meaning": "هم يملكون" }
+        ],
+        "examples": [
+          { "it": "Io ho un cane.", "ar": "أنا أملك كلباً." },
+          { "it": "Quanti anni hai?", "ar": "كم عمرك؟" },
+          { "it": "Ho venti anni.", "ar": "عمري عشرون سنة." }
+        ]
+      }
+    }
+  ],
+  "a2": [
+    {
+      "id": "past_tense",
+      "title": "الماضي المركب",
+      "subtitle": "Passato Prossimo",
+      "icon": "history",
+      "content": {
+        "explanation": "الماضي المركب يستخدم للتعبير عن أحداث حدثت في الماضي. يتكون من فعل مساعد (essere أو avere) + التصريف الثالث.",
+        "table": [
+          { "pronoun": "Io", "conjugation": "ho parlato", "meaning": "تكلمت" },
+          { "pronoun": "Tu", "conjugation": "hai mangiato", "meaning": "أكلت" },
+          { "pronoun": "Lui/Lei", "conjugation": "ha dormito", "meaning": "نام/نامت" },
+          { "pronoun": "Noi", "conjugation": "abbiamo lavorato", "meaning": "عملنا" },
+          { "pronoun": "Voi", "conjugation": "avete studiato", "meaning": "درستم" },
+          { "pronoun": "Loro", "conjugation": "hanno capito", "meaning": "فهموا" }
+        ],
+        "examples": [
+          { "it": "Ieri ho mangiato la pizza.", "ar": "أمس أكلت البيتزا." },
+          { "it": "Sono andato al cinema.", "ar": "ذهبت إلى السينما." },
+          { "it": "Abbiamo studiato italiano.", "ar": "درسنا الإيطالية." }
+        ]
+      }
+    }
+  ],
+  "b1": [],
+  "b2": []
+}
