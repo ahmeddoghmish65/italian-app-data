@@ -1,0 +1,49 @@
+{
+  "a1": [
+    {
+      "id": "common",
+      "title": "عبارات شائعة",
+      "icon": "comment",
+      "phrases": [
+        { "it": "Come stai?", "ar": "كيف حالك؟", "phonetic": "/ˈkome ˈstai/" },
+        { "it": "Sto bene, grazie.", "ar": "أنا بخير، شكراً.", "phonetic": "/sto ˈbɛne ˈɡrattsje/" },
+        { "it": "Come ti chiami?", "ar": "ما اسمك؟", "phonetic": "/ˈkome ti ˈkjami/" },
+        { "it": "Mi chiamo...", "ar": "اسمي...", "phonetic": "/mi ˈkjamo/" },
+        { "it": "Piacere di conoscerti.", "ar": "سعيد بمعرفتك.", "phonetic": "/pjaˈtʃere di konoˈʃerti/" },
+        { "it": "Di dove sei?", "ar": "من أين أنت؟", "phonetic": "/di ˈdove ˈsɛi/" },
+        { "it": "Sono di...", "ar": "أنا من...", "phonetic": "/ˈsono di/" },
+        { "it": "Non capisco.", "ar": "لا أفهم.", "phonetic": "/non kaˈpisko/" },
+        { "it": "Può ripetere?", "ar": "هل يمكنك الإعادة؟", "phonetic": "/ˈpwɔ ripeˈtere/" },
+        { "it": "Parla più lentamente.", "ar": "تكلم ببطء أكثر.", "phonetic": "/ˈparla pju lentaˈmente/" }
+      ]
+    },
+    {
+      "id": "restaurant",
+      "title": "في المطعم",
+      "icon": "utensils",
+      "phrases": [
+        { "it": "Un tavolo per due, per favore.", "ar": "طاولة لشخصين، من فضلك.", "phonetic": "/un ˈtavolo per ˈdue/" },
+        { "it": "Il menù, per favore.", "ar": "القائمة، من فضلك.", "phonetic": "/il meˈnu/" },
+        { "it": "Vorrei ordinare.", "ar": "أريد أن أطلب.", "phonetic": "/vorˈrɛi ordiˈnare/" },
+        { "it": "Il conto, per favore.", "ar": "الحساب، من فضلك.", "phonetic": "/il ˈkonto/" },
+        { "it": "È delizioso!", "ar": "إنه لذيذ!", "phonetic": "/ɛ deliˈtsjoso/" },
+        { "it": "Sono vegetariano.", "ar": "أنا نباتي.", "phonetic": "/ˈsono vedʒetaˈrjano/" }
+      ]
+    }
+  ],
+  "a2": [
+    {
+      "id": "shopping",
+      "title": "التسوق",
+      "icon": "shopping-bag",
+      "phrases": [
+        { "it": "Quanto costa?", "ar": "كم الثمن؟", "phonetic": "/ˈkwanto ˈkɔsta/" },
+        { "it": "È troppo caro.", "ar": "هذا غالي جداً.", "phonetic": "/ɛ ˈtrɔppo ˈkaro/" },
+        { "it": "Posso provarlo?", "ar": "هل يمكنني تجربته؟", "phonetic": "/ˈpɔsso proˈvarlo/" },
+        { "it": "Accettate carte di credito?", "ar": "هل تقبلون بطاقات الائتمان؟", "phonetic": "/atʃetˈtate/" }
+      ]
+    }
+  ],
+  "b1": [],
+  "b2": []
+}
