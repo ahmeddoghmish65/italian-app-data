@@ -1,0 +1,181 @@
+{
+  "a1": {
+    "greetings": {
+      "name": "التحيات",
+      "icon": "hand-wave",
+      "words": [
+        {
+          "it": "Ciao",
+          "ar": "مرحباً",
+          "phonetic": "/ˈtʃaːo/",
+          "type": "تحية",
+          "example": { "it": "Ciao, come stai?", "ar": "مرحباً، كيف حالك؟" }
+        },
+        {
+          "it": "Buongiorno",
+          "ar": "صباح الخير",
+          "phonetic": "/bwonˈdʒorno/",
+          "type": "تحية",
+          "example": { "it": "Buongiorno signora!", "ar": "صباح الخير سيدتي!" }
+        },
+        {
+          "it": "Buonasera",
+          "ar": "مساء الخير",
+          "phonetic": "/bwɔnaˈsera/",
+          "type": "تحية",
+          "example": { "it": "Buonasera a tutti!", "ar": "مساء الخير للجميع!" }
+        },
+        {
+          "it": "Buonanotte",
+          "ar": "تصبح على خير",
+          "phonetic": "/bwɔnaˈnɔtte/",
+          "type": "تحية",
+          "example": { "it": "Buonanotte!", "ar": "تصبح على خير!" }
+        },
+        {
+          "it": "Arrivederci",
+          "ar": "إلى اللقاء",
+          "phonetic": "/arriˈvedertʃi/",
+          "type": "تحية",
+          "example": { "it": "Arrivederci, a domani!", "ar": "إلى اللقاء، نلتقي غداً!" }
+        },
+        {
+          "it": "Grazie",
+          "ar": "شكراً",
+          "phonetic": "/ˈɡrattsje/",
+          "type": "تعبير",
+          "example": { "it": "Grazie mille!", "ar": "شكراً جزيلاً!" }
+        },
+        {
+          "it": "Prego",
+          "ar": "عفواً",
+          "phonetic": "/ˈprɛɡo/",
+          "type": "تعبير",
+          "example": { "it": "Prego!", "ar": "عفواً!" }
+        },
+        {
+          "it": "Scusa",
+          "ar": "عذراً",
+          "phonetic": "/ˈskuza/",
+          "type": "تعبير",
+          "example": { "it": "Scusa, dov'è il bagno?", "ar": "عذراً، أين الحمام؟" }
+        },
+        {
+          "it": "Per favore",
+          "ar": "من فضلك",
+          "phonetic": "/per faˈvore/",
+          "type": "تعبير",
+          "example": { "it": "Un caffè, per favore.", "ar": "قهوة، من فضلك." }
+        },
+        {
+          "it": "Sì",
+          "ar": "نعم",
+          "phonetic": "/si/",
+          "type": "تعبير",
+          "example": { "it": "Sì, certo!", "ar": "نعم، بالتأكيد!" }
+        },
+        {
+          "it": "No",
+          "ar": "لا",
+          "phonetic": "/nɔ/",
+          "type": "تعبير",
+          "example": { "it": "No, grazie.", "ar": "لا، شكراً." }
+        }
+      ]
+    },
+    "numbers": {
+      "name": "الأرقام",
+      "icon": "hashtag",
+      "words": [
+        { "it": "Uno", "ar": "واحد", "phonetic": "/ˈuno/", "type": "رقم", "example": { "it": "Ho un fratello.", "ar": "لدي أخ واحد." } },
+        { "it": "Due", "ar": "اثنان", "phonetic": "/ˈdue/", "type": "رقم", "example": { "it": "Due caffè.", "ar": "قهوتان." } },
+        { "it": "Tre", "ar": "ثلاثة", "phonetic": "/tre/", "type": "رقم", "example": { "it": "Tre giorni.", "ar": "ثلاثة أيام." } },
+        { "it": "Quattro", "ar": "أربعة", "phonetic": "/ˈkwattro/", "type": "رقم", "example": { "it": "Quattro stagioni.", "ar": "أربعة فصول." } },
+        { "it": "Cinque", "ar": "خمسة", "phonetic": "/ˈtʃiŋkwe/", "type": "رقم", "example": { "it": "Cinque minuti.", "ar": "خمس دقائق." } },
+        { "it": "Sei", "ar": "ستة", "phonetic": "/sɛi/", "type": "رقم", "example": { "it": "Sei persone.", "ar": "ستة أشخاص." } },
+        { "it": "Sette", "ar": "سبعة", "phonetic": "/ˈsɛtte/", "type": "رقم", "example": { "it": "Sette giorni.", "ar": "سبعة أيام." } },
+        { "it": "Otto", "ar": "ثمانية", "phonetic": "/ˈɔtto/", "type": "رقم", "example": { "it": "Otto ore.", "ar": "ثماني ساعات." } },
+        { "it": "Nove", "ar": "تسعة", "phonetic": "/ˈnɔve/", "type": "رقم", "example": { "it": "Nove mesi.", "ar": "تسعة أشهر." } },
+        { "it": "Dieci", "ar": "عشرة", "phonetic": "/ˈdjɛtʃi/", "type": "رقم", "example": { "it": "Dieci euro.", "ar": "عشرة يورو." } }
+      ]
+    },
+    "colors": {
+      "name": "الألوان",
+      "icon": "palette",
+      "words": [
+        { "it": "Rosso", "ar": "أحمر", "phonetic": "/ˈrosso/", "type": "صفة", "example": { "it": "Il pomodoro è rosso.", "ar": "الطماطم حمراء." } },
+        { "it": "Blu", "ar": "أزرق", "phonetic": "/blu/", "type": "صفة", "example": { "it": "Il cielo è blu.", "ar": "السماء زرقاء." } },
+        { "it": "Verde", "ar": "أخضر", "phonetic": "/ˈverde/", "type": "صفة", "example": { "it": "L'erba è verde.", "ar": "العشب أخضر." } },
+        { "it": "Giallo", "ar": "أصفر", "phonetic": "/ˈdʒallo/", "type": "صفة", "example": { "it": "Il sole è giallo.", "ar": "الشمس صفراء." } },
+        { "it": "Nero", "ar": "أسود", "phonetic": "/ˈnero/", "type": "صفة", "example": { "it": "Il gatto è nero.", "ar": "القط أسود." } },
+        { "it": "Bianco", "ar": "أبيض", "phonetic": "/ˈbjaŋko/", "type": "صفة", "example": { "it": "La neve è bianca.", "ar": "الثلج أبيض." } },
+        { "it": "Arancione", "ar": "برتقالي", "phonetic": "/aranˈtʃone/", "type": "صفة", "example": { "it": "L'arancia è arancione.", "ar": "البرتقالة برتقالية." } },
+        { "it": "Rosa", "ar": "وردي", "phonetic": "/ˈrɔza/", "type": "صفة", "example": { "it": "Il fiore è rosa.", "ar": "الوردة وردية." } }
+      ]
+    },
+    "family": {
+      "name": "العائلة",
+      "icon": "users",
+      "words": [
+        { "it": "Madre", "ar": "أم", "phonetic": "/ˈmadre/", "type": "اسم", "example": { "it": "Mia madre è gentile.", "ar": "أمي لطيفة." } },
+        { "it": "Padre", "ar": "أب", "phonetic": "/ˈpadre/", "type": "اسم", "example": { "it": "Mio padre lavora.", "ar": "أبي يعمل." } },
+        { "it": "Fratello", "ar": "أخ", "phonetic": "/fraˈtɛllo/", "type": "اسم", "example": { "it": "Ho un fratello.", "ar": "لدي أخ." } },
+        { "it": "Sorella", "ar": "أخت", "phonetic": "/soˈrɛlla/", "type": "اسم", "example": { "it": "Mia sorella studia.", "ar": "أختي تدرس." } },
+        { "it": "Nonno", "ar": "جد", "phonetic": "/ˈnɔnno/", "type": "اسم", "example": { "it": "Il nonno è anziano.", "ar": "الجد كبير." } },
+        { "it": "Nonna", "ar": "جدة", "phonetic": "/ˈnɔnna/", "type": "اسم", "example": { "it": "La nonna cucina bene.", "ar": "الجدة تطبخ جيداً." } },
+        { "it": "Figlio", "ar": "ابن", "phonetic": "/ˈfiʎʎo/", "type": "اسم", "example": { "it": "Il mio figlio.", "ar": "ابني." } },
+        { "it": "Figlia", "ar": "ابنة", "phonetic": "/ˈfiʎʎa/", "type": "اسم", "example": { "it": "La mia figlia.", "ar": "ابنتي." } }
+      ]
+    },
+    "food": {
+      "name": "الطعام",
+      "icon": "utensils",
+      "words": [
+        { "it": "Pane", "ar": "خبز", "phonetic": "/ˈpane/", "type": "اسم", "example": { "it": "Il pane fresco.", "ar": "خبز طازج." } },
+        { "it": "Acqua", "ar": "ماء", "phonetic": "/ˈakkwa/", "type": "اسم", "example": { "it": "Bevo acqua.", "ar": "أشرب ماء." } },
+        { "it": "Caffè", "ar": "قهوة", "phonetic": "/kafˈfɛ/", "type": "اسم", "example": { "it": "Un caffè, per favore.", "ar": "قهوة، من فضلك." } },
+        { "it": "Pizza", "ar": "بيتزا", "phonetic": "/ˈpittsa/", "type": "اسم", "example": { "it": "La pizza è buona.", "ar": "البيتزا لذيذة." } },
+        { "it": "Pasta", "ar": "معكرونة", "phonetic": "/ˈpasta/", "type": "اسم", "example": { "it": "Mangio pasta.", "ar": "آكل معكرونة." } },
+        { "it": "Formaggio", "ar": "جبنة", "phonetic": "/forˈmaddʒo/", "type": "اسم", "example": { "it": "Il formaggio italiano.", "ar": "الجبنة الإيطالية." } },
+        { "it": "Latte", "ar": "حليب", "phonetic": "/ˈlatte/", "type": "اسم", "example": { "it": "Il latte fresco.", "ar": "حليب طازج." } },
+        { "it": "Vino", "ar": "نبيذ", "phonetic": "/ˈvino/", "type": "اسم", "example": { "it": "Un bicchiere di vino.", "ar": "كأس من النبيذ." } }
+      ]
+    }
+  },
+  "a2": {
+    "travel": {
+      "name": "السفر",
+      "icon": "plane",
+      "words": [
+        { "it": "Aeroporto", "ar": "مطار", "phonetic": "/aeroˈpɔrto/", "type": "اسم", "example": { "it": "Vado all'aeroporto.", "ar": "أذهب للمطار." } },
+        { "it": "Stazione", "ar": "محطة", "phonetic": "/statˈtsjone/", "type": "اسم", "example": { "it": "La stazione centrale.", "ar": "المحطة المركزية." } },
+        { "it": "Treno", "ar": "قطار", "phonetic": "/ˈtrɛno/", "type": "اسم", "example": { "it": "Il treno parte.", "ar": "القطار يغادر." } },
+        { "it": "Biglietto", "ar": "تذكرة", "phonetic": "/biʎˈʎetto/", "type": "اسم", "example": { "it": "Un biglietto.", "ar": "تذكرة واحدة." } },
+        { "it": "Valigia", "ar": "حقيبة", "phonetic": "/vaˈlidʒa/", "type": "اسم", "example": { "it": "La mia valigia.", "ar": "حقيبتي." } },
+        { "it": "Passaporto", "ar": "جواز سفر", "phonetic": "/passaˈpɔrto/", "type": "اسم", "example": { "it": "Il passaporto.", "ar": "جواز السفر." } }
+      ]
+    }
+  },
+  "b1": {
+    "emotions": {
+      "name": "المشاعر",
+      "icon": "heart",
+      "words": [
+        { "it": "Felice", "ar": "سعيد", "phonetic": "/feˈlitʃe/", "type": "صفة", "example": { "it": "Sono felice.", "ar": "أنا سعيد." } },
+        { "it": "Triste", "ar": "حزين", "phonetic": "/ˈtriste/", "type": "صفة", "example": { "it": "Sono triste.", "ar": "أنا حزين." } },
+        { "it": "Arrabbiato", "ar": "غاضب", "phonetic": "/arrabˈbjato/", "type": "صفة", "example": { "it": "È arrabbiato.", "ar": "إنه غاضب." } },
+        { "it": "Stanco", "ar": "متعب", "phonetic": "/ˈstaŋko/", "type": "صفة", "example": { "it": "Sono stanco.", "ar": "أنا متعب." } }
+      ]
+    }
+  },
+  "b2": {
+    "business": {
+      "name": "الأعمال",
+      "icon": "briefcase",
+      "words": [
+        { "it": "Contratto", "ar": "عقد", "phonetic": "/konˈtratto/", "type": "اسم", "example": { "it": "Firmare il contratto.", "ar": "توقيع العقد." } },
+        { "it": "Riunione", "ar": "اجتماع", "phonetic": "/rjuˈnjone/", "type": "اسم", "example": { "it": "Ho una riunione.", "ar": "لدي اجتماع." } }
+      ]
+    }
+  }
+}
