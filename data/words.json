@@ -1355,21 +1355,6 @@
         { "it": "Treno", "ar": "قطار", "phonetic": "/ˈtrɛno/", "type": "اسم", "example": { "it": "Il treno parte.", "ar": "القطار يغادر." } },
         { "it": "Biglietto", "ar": "تذكرة", "phonetic": "/biʎˈʎetto/", "type": "اسم", "example": { "it": "Un biglietto.", "ar": "تذكرة واحدة." } },
         { "it": "Valigia", "ar": "حقيبة", "phonetic": "/vaˈlidʒa/", "type": "اسم", "example": { "it": "La mia valigia.", "ar": "حقيبتي." } },
-        { "it": "Passaporto", "ar": "جواز سفر", "phonetic": "/passaˈpɔrto/", "type": "اسم", "example": { "it": "Il passaporto.", "ar": "جواز السفر." } }
-      ]
-    }
-  },
-{
-  "a2": {
-    "travel": {
-      "name": "السفر",
-      "icon": "plane",
-      "words": [
-        { "it": "Aeroporto", "ar": "مطار", "phonetic": "/aeroˈpɔrto/", "type": "اسم", "example": { "it": "Vado all'aeroporto.", "ar": "أذهب للمطار." } },
-        { "it": "Stazione", "ar": "محطة", "phonetic": "/statˈtsjone/", "type": "اسم", "example": { "it": "La stazione centrale.", "ar": "المحطة المركزية." } },
-        { "it": "Treno", "ar": "قطار", "phonetic": "/ˈtrɛno/", "type": "اسم", "example": { "it": "Il treno parte.", "ar": "القطار يغادر." } },
-        { "it": "Biglietto", "ar": "تذكرة", "phonetic": "/biʎˈʎetto/", "type": "اسم", "example": { "it": "Un biglietto.", "ar": "تذكرة واحدة." } },
-        { "it": "Valigia", "ar": "حقيبة", "phonetic": "/vaˈlidʒa/", "type": "اسم", "example": { "it": "La mia valigia.", "ar": "حقيبتي." } },
         { "it": "Passaporto", "ar": "جواز سفر", "phonetic": "/passaˈpɔrto/", "type": "اسم", "example": { "it": "Il passaporto.", "ar": "جواز السفر." } },
         { "it": "Volo", "ar": "رحلة طيران", "phonetic": "/ˈvolo/", "type": "اسم", "example": { "it": "Il volo è in ritardo.", "ar": "الرحلة متأخرة." } },
         { "it": "Partenza", "ar": "مغادرة", "phonetic": "/parˈtentsa/", "type": "اسم", "example": { "it": "L'orario di partenza.", "ar": "وقت المغادرة." } },
