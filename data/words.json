@@ -5994,6 +5994,6 @@
         { "it": "Sebbene", "ar": "على الرغم من أن", "phonetic": "/sebˈbene/", "type": "أداة ربط", "example": { "it": "Sebbene sia difficile.", "ar": "على الرغم من أنه صعب." } },
         { "it": "Benché", "ar": "رغم أن", "phonetic": "/benˈke/", "type": "أداة ربط", "example": { "it": "Benché sia tardi.", "ar": "رغم أن الوقت متأخر." } },
         { "it": "Affinché", "ar": "لكي", "phonetic": "/affinˈke/", "type": "أداة ربط", "example": { "it": "Affinché tu capisca.", "ar": "لكي تفهم" } }
-        ]
+      ]
     }
   },
