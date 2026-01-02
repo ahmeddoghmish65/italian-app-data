@@ -3363,7 +3363,7 @@
         { "it": "Diffidare", "ar": "يرتاب", "phonetic": "/diffiˈdare/", "type": "فعل", "example": { "it": "Diffido di lui.", "ar": "أرتاب منه." } }
       ]
     },
-    "work_profession": {
+    "work_profession_1": {
       "name": "العمل والمهن",
       "icon": "briefcase",
       "words": [
@@ -3500,7 +3500,7 @@
         { "it": "Qualificarsi", "ar": "يتأهل", "phonetic": "/kwalifiˈkarsi/", "type": "فعل", "example": { "it": "Mi sono qualificato.", "ar": "تأهلت." } }
       ]
     },
-    "health_body": {
+    "health_body_1": {
       "name": "الصحة والجسم",
       "icon": "medkit",
       "words": [
@@ -4830,7 +4830,7 @@
         { "it": "Di seconda mano", "ar": "مستعمل", "phonetic": "/di seˈkonda ˈmano/", "type": "صفة", "example": { "it": "È di seconda mano.", "ar": "إنه مستعمل." } }
       ]
     },
-    "sports_hobbies": {
+    "sports_hobbies_1": {
       "name": "الرياضة والهوايات",
       "icon": "football",
       "words": [
@@ -5296,7 +5296,7 @@
         { "it": "Multilingue", "ar": "متعدد اللغات", "phonetic": "/multiˈliŋɡwe/", "type": "صفة", "example": { "it": "È multilingue.", "ar": "إنه متعدد اللغات." } }
       ]
     },
-    "time_calendar": {
+    "time_calendar_2": {
       "name": "الوقت والتقويم",
       "icon": "calendar",
       "words": [
@@ -5421,7 +5421,7 @@
         { "it": "Immediato", "ar": "فوري", "phonetic": "/immeˈdjato/", "type": "صفة", "example": { "it": "Bisogna agire in modo immediato.", "ar": "يجب التصرف بشكل فوري." } }
       ]
     },
-    "numbers_quantities": {
+    "numbers_quantities_1": {
       "name": "الأرقام والكميات",
       "icon": "calculator",
       "words": [
