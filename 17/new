@@ -2719,30 +2719,21 @@
                 </div>
             </div>
 
-              <!-- My Words Page -->
+            <!-- My Words Page (Replaces Dictionary) -->
             <div class="page" id="myWordsPage">
                 <div class="page-header">
-                    <button class="page-back" onclick="goBackWithScroll('home')"><i class="fas fa-arrow-right"></i></button>
-                    <div><div class="page-title">📚 كلماتي</div><div class="page-subtitle">كلماتك حسب مستوى الصعوبة</div></div>
+                    <button class="page-back" onclick="goBack()"><i class="fas fa-arrow-right"></i></button>
+                    <div><div class="page-title">📚 كلماتي</div><div class="page-subtitle">الكلمات حسب مستوى الصعوبة</div></div>
                 </div>
-                <div class="my-words-stats">
-                    <div class="my-words-stat again" onclick="filterMyWords('again')"><div class="my-words-stat-icon">🔄</div><div class="my-words-stat-value" id="myWordsAgainCount">0</div><div class="my-words-stat-label">أعد</div></div>
-                    <div class="my-words-stat hard" onclick="filterMyWords('hard')"><div class="my-words-stat-icon">💪</div><div class="my-words-stat-value" id="myWordsHardCount">0</div><div class="my-words-stat-label">صعب</div></div>
-                    <div class="my-words-stat good" onclick="filterMyWords('good')"><div class="my-words-stat-icon">👍</div><div class="my-words-stat-value" id="myWordsGoodCount">0</div><div class="my-words-stat-label">جيد</div></div>
-                    <div class="my-words-stat easy" onclick="filterMyWords('easy')"><div class="my-words-stat-icon">⭐</div><div class="my-words-stat-value" id="myWordsEasyCount">0</div><div class="my-words-stat-label">سهل</div></div>
+                <div class="my-words-header">
+                    <div class="my-words-stats">
+                        <div class="my-words-stat again" onclick="filterMyWordsByDifficulty('again')" id="myWordsStatAgain"><div class="my-words-stat-value" id="myWordsAgainCount">0</div><div class="my-words-stat-label">أعد</div></div>
+                        <div class="my-words-stat hard" onclick="filterMyWordsByDifficulty('hard')" id="myWordsStatHard"><div class="my-words-stat-value" id="myWordsHardCount">0</div><div class="my-words-stat-label">صعب</div></div>
+                        <div class="my-words-stat good" onclick="filterMyWordsByDifficulty('good')" id="myWordsStatGood"><div class="my-words-stat-value" id="myWordsGoodCount">0</div><div class="my-words-stat-label">جيد</div></div>
+                        <div class="my-words-stat easy" onclick="filterMyWordsByDifficulty('easy')" id="myWordsStatEasy"><div class="my-words-stat-value" id="myWordsEasyCount">0</div><div class="my-words-stat-label">سهل</div></div>
+                    </div>
                 </div>
-                <div class="my-words-level-filter">
-                    <button class="level-filter-btn active" data-level="all" onclick="filterMyWordsByLevel('all')">الكل</button>
-                    <button class="level-filter-btn" data-level="a1" onclick="filterMyWordsByLevel('a1')">A1</button>
-                    <button class="level-filter-btn" data-level="a2" onclick="filterMyWordsByLevel('a2')">A2</button>
-                    <button class="level-filter-btn" data-level="b1" onclick="filterMyWordsByLevel('b1')">B1</button>
-                    <button class="level-filter-btn" data-level="b2" onclick="filterMyWordsByLevel('b2')">B2</button>
-                </div>
-                <div class="my-words-actions">
-                    <button class="my-words-action-btn review" onclick="startReviewSession()"><i class="fas fa-redo"></i> مراجعة الصعبة</button>
-                    <button class="my-words-action-btn study" onclick="studyDueWords()"><i class="fas fa-play"></i> المستحقة <span class="due-badge" id="dueWordsBadge">0</span></button>
-                </div>
-                <div class="search-box"><i class="fas fa-search"></i><input type="text" placeholder="ابحث في كلماتك..." id="myWordsSearch" oninput="searchMyWords()"></div>
+                <div class="search-box"><i class="fas fa-search"></i><input type="text" placeholder="ابحث عن كلمة..." id="myWordsSearch" oninput="searchMyWords()"></div>
                 <div id="myWordsContent"></div>
             </div>
 
@@ -3855,173 +3846,226 @@ function updateCurrentWordFavoriteBtn() {
     btn.classList.toggle('liked', liked);
 }
 
-
-
-// ==================== تعديل 2: إصلاح عداد الكلمات في كلماتي ====================
-function updateMyWordsStats() {
-    const counts = { again: 0, hard: 0, good: 0, easy: 0 };
-    
-    // المرور على جميع الكلمات المتعلمة وحساب كل تصنيف
-    ['a1', 'a2', 'b1', 'b2'].forEach(level => {
-        Object.entries(DATABASE.words[level] || {}).forEach(([catId, cat]) => {
-            const key = `${level}_${catId}`;
-            const learned = appState.learnedWords[key] || {};
-            Object.values(learned).forEach(data => {
-                if (data.lastRating && counts.hasOwnProperty(data.lastRating)) {
-                    counts[data.lastRating]++;
-                }
-            });
-        });
-    });
-    
-    // تحديث العرض
-    const againEl = $('myWordsAgainCount');
-    const hardEl = $('myWordsHardCount');
-    const goodEl = $('myWordsGoodCount');
-    const easyEl = $('myWordsEasyCount');
-    
-    if (againEl) againEl.textContent = counts.again;
-    if (hardEl) hardEl.textContent = counts.hard;
-    if (goodEl) goodEl.textContent = counts.good;
-    if (easyEl) easyEl.textContent = counts.easy;
-    
-    // تحديث الكلمات المستحقة
-    const all = getAllRatedWords();
-    const due = all.filter(w => !w.nextReview || new Date(w.nextReview) <= new Date()).length;
-    const badge = $('dueWordsBadge');
-    if (badge) { badge.textContent = due; badge.style.display = due > 0 ? 'flex' : 'none'; }
-}
-
+// ==================== My Words (Replaces Dictionary) ====================
 function renderMyWords() {
     updateMyWordsStats();
-    const container = $('myWordsContent'); if (!container) return;
-    const allWords = getAllRatedWords();
-    let filtered = allWords;
-    if (myWordsFilter !== 'all') filtered = filtered.filter(w => w.lastRating === myWordsFilter);
-    if (myWordsLevelFilter !== 'all') filtered = filtered.filter(w => w.level === myWordsLevelFilter);
-
-    $$('.my-words-stat').forEach(s => { 
-        const classList = Array.from(s.classList);
-        const rating = classList.find(c => ['again', 'hard', 'good', 'easy'].includes(c));
-        s.classList.toggle('active', myWordsFilter === rating); 
-    });
-
-    if (!filtered.length) {
-        container.innerHTML = allWords.length === 0 ?
-            `<div class="my-words-empty"><div class="my-words-empty-icon">📚</div><div class="my-words-empty-title">لا توجد كلمات بعد</div><div class="my-words-empty-text">ابدأ بتعلم الكلمات وتقييمها</div><button class="word-control-btn primary" onclick="openSection('words')" style="margin: 0 auto;"><i class="fas fa-play"></i> ابدأ</button></div>` :
-            `<div class="my-words-empty"><div class="my-words-empty-icon">🔍</div><div class="my-words-empty-title">لا توجد نتائج</div><button class="word-control-btn secondary" onclick="resetMyWordsFilters()" style="margin: 0 auto;"><i class="fas fa-undo"></i> إعادة</button></div>`;
+    highlightMyWordsFilter();
+    
+    const container = $('myWordsContent');
+    if (!container) return;
+    
+    const wordsByDifficulty = getWordsByDifficulty();
+    const filterDifficulty = myWordsFilterDifficulty;
+    
+    let wordsToShow = [];
+    
+    if (filterDifficulty) {
+        wordsToShow = wordsByDifficulty[filterDifficulty] || [];
+    } else {
+        // إظهار جميع الكلمات المصنفة
+        ['again', 'hard', 'good', 'easy'].forEach(diff => {
+            wordsToShow = wordsToShow.concat(wordsByDifficulty[diff] || []);
+        });
+    }
+    
+    if (!wordsToShow.length) {
+        container.innerHTML = `<div class="empty-state"><i class="fas fa-book-open"></i><p>لا توجد كلمات مصنفة بعد</p><p style="font-size: 12px; margin-top: 10px;">ابدأ بدراسة الكلمات واختر مستوى صعوبتها</p></div>`;
         return;
     }
+    
+    const difficultyLabels = { again: 'أعد', hard: 'صعب', good: 'جيد', easy: 'سهل' };
+    const difficultyIcons = { again: 'redo', hard: 'brain', good: 'thumbs-up', easy: 'check-double' };
+    const difficultyColors = {
+        again: 'linear-gradient(135deg, #EF4444, #F87171)',
+        hard: 'linear-gradient(135deg, #F59E0B, #FBBF24)',
+        good: 'linear-gradient(135deg, #3B82F6, #60A5FA)',
+        easy: 'linear-gradient(135deg, #22C55E, #4ADE80)'
+    };
+    
+    // تجميع حسب الصعوبة
+    const grouped = {};
+    wordsToShow.forEach(word => {
+        const diff = word.lastRating || 'again';
+        if (!grouped[diff]) grouped[diff] = [];
+        grouped[diff].push(word);
+    });
+    
+    let html = '';
+    
+    ['again', 'hard', 'good', 'easy'].forEach(diff => {
+        if (!grouped[diff] || !grouped[diff].length) return;
+        if (filterDifficulty && filterDifficulty !== diff) return;
+        
+        const isOpen = appState.openCategories[`mywords_${diff}`] || false;
+        
+        html += `
+            <div class="my-words-category ${isOpen ? 'open' : ''}" id="mywords-cat-${diff}">
+                <div class="my-words-category-header" onclick="toggleMyWordsCategory('${diff}')">
+                    <div class="my-words-category-info">
+                        <div class="my-words-category-icon" style="background: ${difficultyColors[diff]};">
+                            <i class="fas fa-${difficultyIcons[diff]}"></i>
+                        </div>
+                        <div class="my-words-category-text">
+                            <h3>${difficultyLabels[diff]}</h3>
+                            <span>${grouped[diff].length} كلمة</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-down my-words-category-toggle"></i>
+                </div>
+                <div class="my-words-category-content">
+                    ${grouped[diff].map(word => {
+                        const liked = isWordLiked(word);
+                        const nextReview = word.nextReview ? formatNextReview(word.nextReview) : '';
+                        return `
+                            <div class="word-list-item">
+                                <div class="word-list-level ${diff}">${difficultyLabels[diff].charAt(0)}</div>
+                                <div class="word-list-info">
+                                    <div class="word-list-italian">${word.it}</div>
+                                    <div class="word-list-arabic">${word.ar}</div>
+                                    ${nextReview ? `<div class="word-list-next-review">📅 ${nextReview}</div>` : ''}
+                                </div>
+                                <div class="word-list-actions">
+                                    <button class="word-list-btn speak" onclick="event.stopPropagation(); speak('${escapeQuotes(word.it)}')">
+                                        <i class="fas fa-volume-up"></i>
+                                    </button>
+                                    <button class="word-list-btn like ${liked ? 'liked' : ''}" onclick="event.stopPropagation(); toggleLikeFromMyWords(this, '${escapeQuotes(word.it)}')">
+                                        <i class="${liked ? 'fas' : 'far'} fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    container.innerHTML = html || '<div class="empty-state"><i class="fas fa-book-open"></i><p>لا توجد كلمات</p></div>';
+}
 
-    if (myWordsFilter === 'all') {
-        const groups = { again: [], hard: [], good: [], easy: [] };
-        filtered.forEach(w => { if (groups[w.lastRating]) groups[w.lastRating].push(w); });
-        const titles = { again: '🔄 تحتاج إعادة', hard: '💪 صعبة', good: '👍 جيدة', easy: '⭐ سهلة' };
-        const colors = { again: 'var(--danger)', hard: 'var(--warning)', good: 'var(--info)', easy: 'var(--success)' };
-        let html = '';
-        ['again', 'hard', 'good', 'easy'].forEach(r => {
-            if (groups[r].length) {
-                html += `<div class="my-words-section"><div class="my-words-section-header"><div class="my-words-section-title" style="color: ${colors[r]};">${titles[r]}</div><div class="my-words-section-count">${groups[r].length} كلمة</div></div>${groups[r].slice(0, 5).map(w => renderMyWordCard(w)).join('')}${groups[r].length > 5 ? `<button class="word-control-btn secondary" onclick="filterMyWords('${r}')" style="width: 100%; margin-top: 5px;">عرض الكل (${groups[r].length})</button>` : ''}</div>`;
+function getWordsByDifficulty() {
+    const result = { again: [], hard: [], good: [], easy: [] };
+    
+    Object.entries(appState.learnedWords).forEach(([key, words]) => {
+        const [level, catId] = key.split('_');
+        const cat = DATABASE.words[level]?.[catId];
+        
+        Object.entries(words).forEach(([wordIt, wordData]) => {
+            const wordInfo = cat?.words?.find(w => w.it === wordIt);
+            if (wordInfo && wordData.lastRating) {
+                result[wordData.lastRating].push({
+                    ...wordInfo,
+                    ...wordData,
+                    level,
+                    category: cat?.name
+                });
             }
         });
-        container.innerHTML = html;
-    } else {
-        container.innerHTML = filtered.map(w => renderMyWordCard(w)).join('');
-    }
-}
-
-function renderMyWordCard(word) {
-    const icons = { again: '🔄', hard: '💪', good: '👍', easy: '⭐' };
-    const nextText = getNextReviewText(word.nextReview);
-    return `<div class="my-word-card ${word.lastRating}"><div class="my-word-rating">${icons[word.lastRating] || '📚'}</div><div class="my-word-info"><div class="my-word-italian">${word.it}</div><div class="my-word-arabic">${word.ar}</div><div class="my-word-meta"><span class="my-word-level ${word.level}">${word.level.toUpperCase()}</span><span class="my-word-next-review"><i class="fas fa-clock"></i> ${nextText}</span>${word.correctCount > 0 ? `<span class="my-word-streak">🔥 ${word.correctCount}</span>` : ''}</div></div><div class="my-word-actions"><button class="my-word-btn speak" onclick="event.stopPropagation(); speak('${escapeQuotes(word.it)}')"><i class="fas fa-volume-up"></i></button><button class="my-word-btn study" onclick="event.stopPropagation(); studySingleWord('${escapeQuotes(word.it)}', '${word.level}', '${word.categoryId}')"><i class="fas fa-play"></i></button></div></div>`;
-}
-
-function getNextReviewText(nextReview) {
-    if (!nextReview) return 'الآن';
-    const diff = new Date(nextReview) - new Date();
-    if (diff <= 0) return 'مستحقة';
-    const mins = Math.round(diff / 60000);
-    const hours = Math.round(diff / 3600000);
-    const days = Math.round(diff / 86400000);
-    if (mins < 60) return `بعد ${mins} د`;
-    if (hours < 24) return `بعد ${hours} س`;
-    if (days === 1) return 'غداً';
-    if (days < 7) return `بعد ${days} أيام`;
-    return `بعد ${Math.round(days / 7)} أسبوع`;
-}
-
-function getAllRatedWords() {
-    const words = [];
-    ['a1', 'a2', 'b1', 'b2'].forEach(level => {
-        Object.entries(DATABASE.words[level] || {}).forEach(([catId, cat]) => {
-            const key = `${level}_${catId}`;
-            const learned = appState.learnedWords[key] || {};
-            Object.entries(learned).forEach(([wordIt, data]) => {
-                const orig = cat.words?.find(w => w.it === wordIt);
-                if (orig && data.lastRating) words.push({ ...orig, level, categoryId: catId, ...data });
-            });
-        });
     });
-    words.sort((a, b) => new Date(a.nextReview || 0) - new Date(b.nextReview || 0));
-    return words;
+    
+    return result;
 }
 
-function filterMyWords(rating) { myWordsFilter = myWordsFilter === rating ? 'all' : rating; renderMyWords(); }
+function formatNextReview(dateStr) {
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diff = date - now;
+    
+    if (diff < 0) return 'الآن';
+    if (diff < 3600000) return `${Math.round(diff / 60000)} دقيقة`;
+    if (diff < 86400000) return `${Math.round(diff / 3600000)} ساعة`;
+    return `${Math.round(diff / 86400000)} يوم`;
+}
 
-function filterMyWordsByLevel(level) {
-    myWordsLevelFilter = level;
-    $$('.level-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.level === level));
+function updateMyWordsStats() {
+    const wordsByDifficulty = getWordsByDifficulty();
+    
+    const set = (id, val) => { const el = $(id); if (el) el.textContent = val; };
+    set('myWordsAgainCount', wordsByDifficulty.again.length);
+    set('myWordsHardCount', wordsByDifficulty.hard.length);
+    set('myWordsGoodCount', wordsByDifficulty.good.length);
+    set('myWordsEasyCount', wordsByDifficulty.easy.length);
+}
+
+function highlightMyWordsFilter() {
+    ['again', 'hard', 'good', 'easy'].forEach(diff => {
+        const el = $(`myWordsStatAgain`)?.parentElement?.querySelector(`[onclick*="${diff}"]`) || 
+                   document.querySelector(`.my-words-stat.${diff}`);
+        if (el) el.classList.toggle('active', diff === myWordsFilterDifficulty);
+    });
+    
+    $$('.my-words-stat').forEach(el => {
+        const diff = el.classList.contains('again') ? 'again' :
+                     el.classList.contains('hard') ? 'hard' :
+                     el.classList.contains('good') ? 'good' : 'easy';
+        el.classList.toggle('active', diff === myWordsFilterDifficulty);
+    });
+}
+
+function filterMyWordsByDifficulty(difficulty) {
+    myWordsFilterDifficulty = myWordsFilterDifficulty === difficulty ? null : difficulty;
     renderMyWords();
 }
 
-function resetMyWordsFilters() {
-    myWordsFilter = 'all'; myWordsLevelFilter = 'all';
-    $$('.level-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.level === 'all'));
-    $$('.my-words-stat').forEach(s => s.classList.remove('active'));
-    renderMyWords();
+function toggleMyWordsCategory(diff) {
+    const key = `mywords_${diff}`;
+    appState.openCategories[key] = !appState.openCategories[key];
+    saveState();
+    $(`mywords-cat-${diff}`)?.classList.toggle('open', appState.openCategories[key]);
 }
 
-function startReviewSession() {
-    const difficult = getAllRatedWords().filter(w => w.lastRating === 'again' || w.lastRating === 'hard');
-    if (!difficult.length) { showToast('🎉 لا توجد كلمات صعبة!', 'success'); return; }
-    currentWords = difficult.sort(() => Math.random() - 0.5).slice(0, 20);
-    currentWordIndex = 0; currentCategory = 'review'; previousPage = 'mywords';
-    $('wordCategoryTitle').textContent = '🔄 مراجعة الكلمات الصعبة';
-    $$('.page').forEach(p => p.classList.remove('active'));
-    $('wordStudyPage').classList.add('active');
-    displayCurrentWord();
-}
-
-function studyDueWords() {
-    const due = getAllRatedWords().filter(w => !w.nextReview || new Date(w.nextReview) <= new Date());
-    if (!due.length) { showToast('✅ لا توجد كلمات مستحقة', 'info'); return; }
-    currentWords = due.slice(0, 20);
-    currentWordIndex = 0; currentCategory = 'due'; previousPage = 'mywords';
-    $('wordCategoryTitle').textContent = `📖 مراجعة مستحقة (${due.length})`;
-    $$('.page').forEach(p => p.classList.remove('active'));
-    $('wordStudyPage').classList.add('active');
-    displayCurrentWord();
-}
-
-function studySingleWord(wordIt, level, categoryId) {
-    const cat = DATABASE.words[level]?.[categoryId];
-    const word = cat?.words?.find(w => w.it === wordIt);
+function toggleLikeFromMyWords(btn, wordIt) {
+    const allWords = getAllWordsFlat();
+    const word = allWords.find(w => w.it === wordIt);
     if (!word) return;
-    currentWords = [{ ...word, level, categoryId }];
-    currentWordIndex = 0; currentCategory = categoryId; previousPage = 'mywords';
-    $('wordCategoryTitle').textContent = word.it;
-    $$('.page').forEach(p => p.classList.remove('active'));
-    $('wordStudyPage').classList.add('active');
-    displayCurrentWord();
+    
+    toggleLikeWord(word);
+    const liked = isWordLiked(word);
+    btn.classList.toggle('liked', liked);
+    btn.innerHTML = `<i class="${liked ? 'fas' : 'far'} fa-heart"></i>`;
 }
 
 const searchMyWords = debounce(() => {
-    const q = $('myWordsSearch')?.value.trim().toLowerCase();
-    if (!q) { renderMyWords(); return; }
-    const filtered = getAllRatedWords().filter(w => w.it.toLowerCase().includes(q) || w.ar.includes(q));
+    const query = $('myWordsSearch')?.value.trim().toLowerCase();
     const container = $('myWordsContent');
-    container.innerHTML = filtered.length ? filtered.map(w => renderMyWordCard(w)).join('') :
-        `<div class="my-words-empty"><div class="my-words-empty-icon">🔍</div><div class="my-words-empty-title">لا توجد نتائج</div></div>`;
+    
+    if (!query) { renderMyWords(); return; }
+    
+    const wordsByDifficulty = getWordsByDifficulty();
+    const allWords = [...wordsByDifficulty.again, ...wordsByDifficulty.hard, ...wordsByDifficulty.good, ...wordsByDifficulty.easy];
+    
+    const results = allWords.filter(w => 
+        w.it.toLowerCase().includes(query) || w.ar.includes(query)
+    );
+    
+    if (!results.length) {
+        container.innerHTML = '<div class="empty-state"><i class="fas fa-search"></i><p>لا توجد نتائج</p></div>';
+        return;
+    }
+    
+    const difficultyLabels = { again: 'أعد', hard: 'صعب', good: 'جيد', easy: 'سهل' };
+    
+    container.innerHTML = results.slice(0, 50).map(word => {
+        const liked = isWordLiked(word);
+        const diff = word.lastRating || 'again';
+        return `
+            <div class="word-list-item">
+                <div class="word-list-level ${diff}">${difficultyLabels[diff].charAt(0)}</div>
+                <div class="word-list-info">
+                    <div class="word-list-italian">${word.it}</div>
+                    <div class="word-list-arabic">${word.ar}</div>
+                </div>
+                <div class="word-list-actions">
+                    <button class="word-list-btn speak" onclick="speak('${escapeQuotes(word.it)}')">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <button class="word-list-btn like ${liked ? 'liked' : ''}" onclick="toggleLikeFromMyWords(this, '${escapeQuotes(word.it)}')">
+                        <i class="${liked ? 'fas' : 'far'} fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+    }).join('');
 }, 250);
 
 // ==================== Favorites ====================
