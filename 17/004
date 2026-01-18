@@ -2518,6 +2518,13 @@
                 </div>
                 <i class="fas fa-chevron-left" style="color: var(--text-secondary);"></i>
             </div>
+            <div class="settings-item" onclick="openInfoPage('contact')">
+                <div class="settings-item-info">
+                    <div class="settings-item-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="settings-item-text"><h4>اتصل بنا</h4><p>تواصل معنا</p></div>
+                </div>
+                <i class="fas fa-chevron-left" style="color: var(--text-secondary);"></i>
+            </div>
             <div class="settings-item" onclick="openInfoPage('privacy')">
                 <div class="settings-item-info">
                     <div class="settings-item-icon"><i class="fas fa-shield-alt"></i></div>
