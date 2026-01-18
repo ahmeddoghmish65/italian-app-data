@@ -2719,21 +2719,30 @@
                 </div>
             </div>
 
-            <!-- My Words Page (Replaces Dictionary) -->
+              <!-- My Words Page -->
             <div class="page" id="myWordsPage">
                 <div class="page-header">
-                    <button class="page-back" onclick="goBack()"><i class="fas fa-arrow-right"></i></button>
-                    <div><div class="page-title">📚 كلماتي</div><div class="page-subtitle">الكلمات حسب مستوى الصعوبة</div></div>
+                    <button class="page-back" onclick="goBackWithScroll('home')"><i class="fas fa-arrow-right"></i></button>
+                    <div><div class="page-title">📚 كلماتي</div><div class="page-subtitle">كلماتك حسب مستوى الصعوبة</div></div>
                 </div>
-                <div class="my-words-header">
-                    <div class="my-words-stats">
-                        <div class="my-words-stat again" onclick="filterMyWordsByDifficulty('again')" id="myWordsStatAgain"><div class="my-words-stat-value" id="myWordsAgainCount">0</div><div class="my-words-stat-label">أعد</div></div>
-                        <div class="my-words-stat hard" onclick="filterMyWordsByDifficulty('hard')" id="myWordsStatHard"><div class="my-words-stat-value" id="myWordsHardCount">0</div><div class="my-words-stat-label">صعب</div></div>
-                        <div class="my-words-stat good" onclick="filterMyWordsByDifficulty('good')" id="myWordsStatGood"><div class="my-words-stat-value" id="myWordsGoodCount">0</div><div class="my-words-stat-label">جيد</div></div>
-                        <div class="my-words-stat easy" onclick="filterMyWordsByDifficulty('easy')" id="myWordsStatEasy"><div class="my-words-stat-value" id="myWordsEasyCount">0</div><div class="my-words-stat-label">سهل</div></div>
-                    </div>
+                <div class="my-words-stats">
+                    <div class="my-words-stat again" onclick="filterMyWords('again')"><div class="my-words-stat-icon">🔄</div><div class="my-words-stat-value" id="myWordsAgainCount">0</div><div class="my-words-stat-label">أعد</div></div>
+                    <div class="my-words-stat hard" onclick="filterMyWords('hard')"><div class="my-words-stat-icon">💪</div><div class="my-words-stat-value" id="myWordsHardCount">0</div><div class="my-words-stat-label">صعب</div></div>
+                    <div class="my-words-stat good" onclick="filterMyWords('good')"><div class="my-words-stat-icon">👍</div><div class="my-words-stat-value" id="myWordsGoodCount">0</div><div class="my-words-stat-label">جيد</div></div>
+                    <div class="my-words-stat easy" onclick="filterMyWords('easy')"><div class="my-words-stat-icon">⭐</div><div class="my-words-stat-value" id="myWordsEasyCount">0</div><div class="my-words-stat-label">سهل</div></div>
                 </div>
-                <div class="search-box"><i class="fas fa-search"></i><input type="text" placeholder="ابحث عن كلمة..." id="myWordsSearch" oninput="searchMyWords()"></div>
+                <div class="my-words-level-filter">
+                    <button class="level-filter-btn active" data-level="all" onclick="filterMyWordsByLevel('all')">الكل</button>
+                    <button class="level-filter-btn" data-level="a1" onclick="filterMyWordsByLevel('a1')">A1</button>
+                    <button class="level-filter-btn" data-level="a2" onclick="filterMyWordsByLevel('a2')">A2</button>
+                    <button class="level-filter-btn" data-level="b1" onclick="filterMyWordsByLevel('b1')">B1</button>
+                    <button class="level-filter-btn" data-level="b2" onclick="filterMyWordsByLevel('b2')">B2</button>
+                </div>
+                <div class="my-words-actions">
+                    <button class="my-words-action-btn review" onclick="startReviewSession()"><i class="fas fa-redo"></i> مراجعة الصعبة</button>
+                    <button class="my-words-action-btn study" onclick="studyDueWords()"><i class="fas fa-play"></i> المستحقة <span class="due-badge" id="dueWordsBadge">0</span></button>
+                </div>
+                <div class="search-box"><i class="fas fa-search"></i><input type="text" placeholder="ابحث في كلماتك..." id="myWordsSearch" oninput="searchMyWords()"></div>
                 <div id="myWordsContent"></div>
             </div>
 
